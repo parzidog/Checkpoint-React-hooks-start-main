@@ -1,6 +1,128 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/AddPet.js":
+/*!**********************************!*\
+  !*** ./src/components/AddPet.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _petdata__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../petdata */ "./src/petdata.js");
+/* harmony import */ var _PetList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PetList */ "./src/components/PetList.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var AddPet = function AddPet() {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(_petdata__WEBPACK_IMPORTED_MODULE_1__["default"]),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      list = _React$useState2[0],
+      setList = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      name = _React$useState4[0],
+      setName = _React$useState4[1];
+
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      description = _React$useState6[0],
+      setDescription = _React$useState6[1];
+
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      species = _React$useState8[0],
+      setSpecies = _React$useState8[1];
+
+  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
+      _React$useState10 = _slicedToArray(_React$useState9, 2),
+      change = _React$useState10[0],
+      setChange = _React$useState10[1];
+
+  var handleName = function handleName(event) {
+    setName(event.target.value);
+  };
+
+  var handleDescription = function handleDescription(event) {
+    setDescription(event.target.value);
+  };
+
+  var handleSpecies = function handleSpecies(event) {
+    setSpecies(event.target.value);
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(function () {
+    console.log('hit');
+  }, [change]);
+
+  var submit = function submit() {
+    var newList = list;
+    var newObj = {
+      id: list.length + 1,
+      name: name,
+      description: description,
+      species: species
+    };
+    newList.push(newObj);
+    setList(newList);
+    setChange(!change);
+    setName('');
+    setDescription('');
+    setSpecies('');
+    console.log(list);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_PetList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: "petList",
+    data: list
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "addPet"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "ADD A NEW PET HERE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    id: "name",
+    value: name,
+    onChange: handleName,
+    placeholder: "Pet's Name"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    id: "species",
+    value: species,
+    onChange: handleSpecies,
+    placeholder: "Pet's Species"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    id: "description",
+    value: description,
+    onChange: handleDescription,
+    placeholder: "Description of Pet"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: submit
+  }, "Submit")));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddPet);
+
+/***/ }),
+
 /***/ "./src/components/PetList.js":
 /*!***********************************!*\
   !*** ./src/components/PetList.js ***!
@@ -15,22 +137,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SinglePet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SinglePet */ "./src/components/SinglePet.js");
+/* harmony import */ var _petdata__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../petdata */ "./src/petdata.js");
 
 
-var cody = {
-  id: 2,
-  name: 'Cody',
-  description: 'Adorable pug who loves to hug',
-  species: 'dog'
-}; // PetList only renders one SinglePet. We'd like it to render a list of pets,
-// passed in as props.pets. Don't forget to add a unique key to each one!
+
 
 function PetList() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pet-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_SinglePet__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    pet: cody
-  })));
+  }, _petdata__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (pet) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_SinglePet__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: pet.id,
+      data: pet,
+      pet: pet.name
+    });
+  }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PetList);
@@ -51,17 +172,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _PetList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PetList */ "./src/components/PetList.js");
-/* harmony import */ var _petdata__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../petdata */ "./src/petdata.js");
+/* harmony import */ var _AddPet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AddPet */ "./src/components/AddPet.js");
+/* eslint-disable react/no-unescaped-entities */
 
- // We'll render these sample pets for now. Later, we'll instead fetch the list
-// of pets from the server! We won't need samplePets after that.
 
 
 
 var Root = function Root() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Adoption Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_PetList__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    pets: _petdata__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Kenny's Adoption Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_AddPet__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Root);
@@ -81,12 +199,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-function SinglePet() {
+
+function SinglePet(props) {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      adopted = _React$useState2[0],
+      setAdopted = _React$useState2[1];
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "single-pet"
-  });
+    className: adopted ? "notAdopted" : "adopted",
+    onClick: function onClick() {
+      return setAdopted(!adopted);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, props.data.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, props.data.species), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, props.data.description), adopted ? "Has been adopted!" : "Needs to be adopted!");
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SinglePet);
@@ -104,7 +242,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var pets = [{
+var Pets = [{
   id: 1,
   name: 'Rigatoni',
   description: 'A flaming hot cheetoh in feline form',
@@ -125,7 +263,7 @@ var pets = [{
   description: 'Might eat your couch',
   species: 'dog'
 }];
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pets);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pets);
 
 /***/ }),
 
