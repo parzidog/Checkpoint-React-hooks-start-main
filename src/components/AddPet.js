@@ -17,13 +17,13 @@ const AddPet =()=>{
         setName(event.target.value);
       }
 
-      const handleDescription =(event)=>{
-        setDescription(event.target.value);
-      }
+    const handleDescription =(event)=>{
+    setDescription(event.target.value);
+    }
 
-      const handleSpecies =(event)=>{
-        setSpecies(event.target.value);
-      }
+    const handleSpecies =(event)=>{
+    setSpecies(event.target.value);
+    }
 
     React.useEffect(()=>{
         console.log('hit')
